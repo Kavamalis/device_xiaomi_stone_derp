@@ -89,3 +89,6 @@ ro.sf.skip_set_active_mode_when_off=1
 # Disable Skia tracing by default
 debug.hwui.skia_tracing_enabled=false
 debug.hwui.skia_use_perfetto_track_events=false
+
+# Render
+debug.cpurend.vsync=false
