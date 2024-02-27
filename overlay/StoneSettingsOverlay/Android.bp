@@ -14,5 +14,5 @@
 
 runtime_resource_overlay {
     name: "StoneSettingsOverlay",
-    product_specific: true,
+    vendor: true,
 }
