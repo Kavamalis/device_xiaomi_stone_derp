@@ -1,3 +1,11 @@
+
+prebuilt_etc {
+
+    name: "apdr.conf",
+    vendor: true,
+    src: "apdr.conf",
+}
+
 prebuilt_etc {
     name: "apdr.conf",
     vendor: true,
@@ -29,12 +37,14 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+
     name: "lowi.conf",
     vendor: true,
     src: "lowi.conf",
 }
 
 prebuilt_etc {
+
     name: "sap.conf",
     vendor: true,
     src: "sap.conf",
