@@ -61,19 +61,13 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     libaudiopreprocessing \
-    libbatterylistener \
     libbundlewrapper \
-    libcomprcapture \
     libdownmix \
     libdynproc \
     libeffectproxy \
     libexthwplugin \
-    libhdmiedid \
-    libhfp \
     libldnhncr \
     libreverbwrapper \
-    libsndmonitor \
-    libspkrprot \
     libvisualizer
 
 PRODUCT_COPY_FILES += \
