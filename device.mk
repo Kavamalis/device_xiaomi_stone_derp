@@ -33,6 +33,50 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Kernel
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)-kernel/kernel
 PRODUCT_ENABLE_UFFD_GC := false
+ifeq ($(PREBUILT_KERNEL),true)
+PRODUCT_VENDOR_KERNEL_HEADERS := device/xiaomi/stone-kernel/kernel-headers
+
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    device/xiaomi/stone-kernel
+endif
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1.vendor
+
+# Media
+PRODUCT_PACKAGES += \
+    libavservices_minijail \
+    libavservices_minijail.vendor \
+    libavservices_minijail_vendor \
+    libcodec2_hidl@1.1.vendor \
+    libmm-omxcore \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc \
+    libstagefrighthw \
+    libstagefright_omx \
+    libstagefright_omx.vendor \
+    libstagefright_foundation \
+    libstagefright_softomx.vendor \
+    android.hardware.media.c2@1.1.vendor \
+    android.hardware.media.c2@1.2.vendor \
+    libcodec2_soft_avcdec \
+    libcodec2_soft_avcenc \
+    libcodec2_soft_h263dec \
+    libcodec2_soft_h263enc \
+    libcodec2_soft_mpeg4dec \
+    libcodec2_soft_mpeg4enc \
+    libcodec2_soft_vp8dec \
+    libcodec2_soft_vp8enc \
+    libcodec2_soft_vp9dec \
+    libcodec2_soft_vp9enc \
+    libcodec2_soft_hevcdec \
+    libcodec2_soft_hevcenc
 
 PRODUCT_COPY_FILES += \
     $(TARGET_PREBUILT_KERNEL):kernel \
