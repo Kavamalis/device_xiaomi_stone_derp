@@ -52,6 +52,8 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'vendor/bin/STFlashTool': blob_fixup()
          .add_needed('libbase_shim.so'),
+    'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
+        .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
     'vendor/lib64/camera/components/com.qti.node.mialgocontrol.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
      'vendor/lib64/libwvhidl.so': blob_fixup()
