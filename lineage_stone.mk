@@ -16,7 +16,11 @@ $(call inherit-product, device/xiaomi/stone/device.mk)
 
 PREBUILT_KERNEL := true
 
-include vendor/private/keys/keys.mk
+# To include Gapps 
+WITH_GMS := true
+
+# To Build Pixel launcher
+TARGET_INCLUDE_NEXUS := true
 
 PRODUCT_NAME := lineage_stone
 PRODUCT_DEVICE := stone
