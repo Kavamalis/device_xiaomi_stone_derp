@@ -477,7 +477,7 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     librmnetctl \
-    libxml12
+    libxml2
 
 PRODUCT_PACKAGES += \
     libcurl.vendor \
