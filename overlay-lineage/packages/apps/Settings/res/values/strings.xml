@@ -5,5 +5,5 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Android version screen, build maintainer -->
-    <string name="matrixx_maintainer">Mayuresh & Khnome</string>
+    <string name="matrixx_maintainer">Mayuresh &amp; Khnome</string>
 </resources>
