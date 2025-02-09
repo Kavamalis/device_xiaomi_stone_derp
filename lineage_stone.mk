@@ -16,6 +16,13 @@ $(call inherit-product, device/xiaomi/stone/device.mk)
 
 PREBUILT_KERNEL := true
 
+# Matrixx
+MATRIXX_BUILD_TYPE := Official
+MATRIXX_MAINTAINER := Mayuresh & Khnome
+MATRIXX_CHIPSET := SM6375
+MATRIXX_BATTERY := 5000mah
+MATRIXX_DISPLAY := 1080x2400
+
 # To include Gapps 
 WITH_GMS := true
 
@@ -27,7 +34,7 @@ PRODUCT_DEVICE := stone
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
 
-#Java
+# Java
 SYSTEM_OPTIMIZE_JAVA := true
 SYSTEMUI_OPTIMIZE_JAVA := true
 
