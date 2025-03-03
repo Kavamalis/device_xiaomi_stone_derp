@@ -74,7 +74,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/stone/moonstone/moonstone-vendor.mk)
+$(call inherit-product, vendor/xiaomi/stone/stone-vendor.mk)
 
 # Inherit from sm6375-common
 $(call inherit-product, device/xiaomi/sm6375-common/holi.mk)
