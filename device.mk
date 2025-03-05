@@ -79,7 +79,7 @@ PRODUCT_PACKAGES += \
     libcodec2_soft_hevcenc
 
 PRODUCT_COPY_FILES += \
-    $(TARGET_PREBUILT_KERNEL):kernel \
+    $(TARGET_PREBUILT_KERNEL):kernel
 
 PRODUCT_VENDOR_KERNEL_HEADERS += $(LOCAL_PATH)-kernel/kernel-headers
 

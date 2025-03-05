@@ -37,7 +37,7 @@ TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)-kernel/dtb.img:$(TARGET_COPY_OUT)/dtb.img \
-    $(DEVICE_PATH)-kernel/kernel:kernel \
+    $(DEVICE_PATH)-kernel/kernel:kernel
 else
 TARGET_KERNEL_SOURCE := kernel/xiaomi/stone
 TARGET_KERNEL_CONFIG := stone_defconfig
