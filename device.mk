@@ -121,3 +121,10 @@ $(call inherit-product, vendor/xiaomi/stone/stone-vendor.mk)
 
 # Inherit from sm6375-common
 $(call inherit-product, device/xiaomi/sm6375-common/holi.mk)
+
+
+# Audio
+PRODUCT_PACKAGES += \
+	android.hardware.audio.effect@7.0-impl \
+	android.hardware.audio.service \
+	android.hardware.audio@7.0-impl
