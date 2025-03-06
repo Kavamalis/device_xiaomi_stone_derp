@@ -129,5 +129,6 @@ $(call inherit-product, device/xiaomi/sm6375-common/holi.mk)
 PRODUCT_PACKAGES += \
 	android.hardware.audio.effect@7.0-impl \
 	android.hardware.audio.service \
-	android.hardware.audio@7.0-impl
+	android.hardware.audio@7.0-impl \
+	libtinyalsa
 TARGET_PROVIDES_AUDIO_HAL := true
