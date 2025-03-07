@@ -132,3 +132,21 @@ PRODUCT_PACKAGES += \
 	android.hardware.audio@7.0-impl \
 	libtinyalsa
 TARGET_PROVIDES_AUDIO_HAL := true
+
+# RIL
+PRODUCT_PACKAGES += \
+    libjson \
+    libprotobuf-cpp-full-3.9.1-vendorcompat \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat \
+    librmnetctl
+
+PRODUCT_PACKAGES += \
+    libcurl.vendor \
+    libjsoncpp.vendor \
+    libsqlite.vendor
+
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.secure_element@1.2.vendor
