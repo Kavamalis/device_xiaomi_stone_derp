@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2023 The LineageOS Project
+# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017-2021 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -22,41 +23,20 @@ if [ ! -f "${HELPER}" ]; then
     exit 1
 fi
 source "${HELPER}"
-function lib_to_package_fixup_vendor_variants() {
-    if [ "$2" != "vendor" ]; then
-        return 1
-    fi
-    case "$1" in
-        com.qualcomm.qti.dpm.api@1.0 | \
-            com.qualcomm.qti.imscmservice* | \
-            com.qualcomm.qti.uceservice* | \
-            libmmosal | \
-            vendor.qti.data.* | \
-            vendor.qti.hardware.data.* | \
-            vendor.qti.hardware.embmssl* | \
-            vendor.qti.hardware.mwqemadapter@1.0 | \
-            vendor.qti.hardware.radio.* | \
-            vendor.qti.hardware.slmadapter@1.0 | \
-            vendor.qti.hardware.wifidisplaysession@1.0 | \
-            vendor.qti.imsrtpservice@3.0 | \
-            vendor.qti.ims.* | \
-            vendor.qti.latency* | \
-            vendor.qti.qspmhal@1.0)
-            echo "$1_vendor"
-            ;;
-        libOmxCore | \
-            libwpa_client)
-            # Android.mk only packages
-            ;;
-        *)
-            return 1
-            ;;
-    esac
-}
-function lib_to_package_fixup() {
-    lib_to_package_fixup_clang_rt_ubsan_standalone "$1" ||
-    lib_to_package_fixup_proto_3_9_1 "$1" ||
-    lib_to_package_fixup_vendor_variants "$@"
+
+function vendor_imports() {
+    cat <<EOF >>"$1"
+        "hardware/qcom/display",
+        "hardware/qcom/display/gralloc",
+        "hardware/qcom/display/libdebug",
+        "hardware/qcom/display/sde-drm",
+        "hardware/xiaomi",
+        "vendor/qcom/common/vendor/display",
+        "vendor/qcom/common/vendor/display/5.4",
+        "vendor/qcom/common/vendor/gps-legacy",
+        "vendor/qcom/common/vendor/media-legacy",
+        "vendor/qcom/common/vendor/wlan-legacy",
+EOF
 }
 
 # Initialize the helper
@@ -66,8 +46,6 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 write_headers
 
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
-
-echo "TARGET_RECOVERY_DEVICE_DIRS += vendor/$VENDOR/$DEVICE/proprietary" >> "$BOARDMK"
 
 # Finish
 write_footers
