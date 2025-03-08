@@ -58,7 +58,7 @@ TARGET_OTA_ASSERT_DEVICE := moonstone,sunstone
 include vendor/xiaomi/stone/BoardConfigVendor.mk
 
 # Inherit from sm6375-common
-include device/xiaomi/sm6375/BoardConfigCommon.mk
+include device/xiaomi/sm6375-common/BoardConfigCommon.mk
 
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
