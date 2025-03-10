@@ -94,7 +94,6 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_stone
-TARGET_RECOVERY_DEVICE_MODULES := init_stone
 
 # Kernel
 $(shell mkdir -p $(OUT_DIR)/target/product/stone/obj/KERNEL_OBJ/usr)
