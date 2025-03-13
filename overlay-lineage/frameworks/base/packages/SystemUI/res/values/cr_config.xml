@@ -16,7 +16,7 @@
 -->
 <resources>
     <!-- The CPU temperature sensor path, defaults to empty -->
-    <string name="config_cpuTempSensor" translatable="false">/sys/class/thermal/thermal_zone39/temp</string>
+    <string name="config_cpu_temp_path" translatable="false">/sys/class/thermal/thermal_zone39/temp</string>
 
     <!-- The CPUs to display in CPUInfoService view -->
     <string name="config_displayCpus" translatable="false">0,4</string>
