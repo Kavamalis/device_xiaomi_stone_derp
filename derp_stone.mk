@@ -8,31 +8,24 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Derp stuff.
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Inherit from stone device
 $(call inherit-product, device/xiaomi/stone/device.mk)
 
 PREBUILT_KERNEL := true
 
-# Matrixx
-MATRIXX_BUILD_TYPE := Official
-MATRIXX_MAINTAINER := Mayuresh & Khnome
-MATRIXX_CHIPSET := SM6375
-MATRIXX_BATTERY := 5000mah
-MATRIXX_DISPLAY := 1080x2400
-
-# To include Gapps 
-WITH_GMS := true
-
-# To Build Pixel launcher
-TARGET_INCLUDE_NEXUS := true
-
-PRODUCT_NAME := lineage_stone
+PRODUCT_NAME := derp_stone
 PRODUCT_DEVICE := stone
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_BRAND := Xiaomi
+PRODUCT_BRAND := POCO
+PRODUCT_MODEL := POCO X5 5G
+
+DERP_BUILDTYPE := Unofficial
+
+-include vendor/priv-keys/keys/keys.mk
+
 
 BuildFingerprint=POCO/moonstone_p_global/moonstone:14/UKQ1.231003.002/V816.0.14.0.UMPMIXM:user/release-keys
 
