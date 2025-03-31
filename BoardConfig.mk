@@ -7,9 +7,7 @@
 DEVICE_PATH := device/xiaomi/stone
 
 # A/B
-AB_OTA_UPDATER := true
-
-AB_OTA_PARTITIONS += \
+AB_OTA_PARTITIONS := \
     boot \
     dtbo \
     odm \
