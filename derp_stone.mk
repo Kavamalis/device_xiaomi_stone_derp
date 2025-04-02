@@ -24,7 +24,7 @@ PRODUCT_MODEL := POCO X5 5G
 
 DERP_BUILDTYPE := Unofficial
 
--include vendor/priv-keys/keys/keys.mk
+include vendor/priv-keys/keys/keys.mk
 
 
 BuildFingerprint=POCO/moonstone_p_global/moonstone:14/UKQ1.231003.002/V816.0.14.0.UMPMIXM:user/release-keys
