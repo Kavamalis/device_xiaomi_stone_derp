@@ -92,3 +92,6 @@ debug.hwui.skia_use_perfetto_track_events=false
 
 # Render
 debug.cpurend.vsync=false
+
+# Multi-Gen LRU
+persist.device_config.mglru_native.lru_gen_config=core_and_mm_walk
