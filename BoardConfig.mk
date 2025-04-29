@@ -93,8 +93,19 @@ TARGET_GLOBAL_THINLTO := true
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_stone
+# HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
+    $(DEVICE_PATH)/device_framework_matrix.xml
+
+DEVICE_MANIFEST_FILE := \
+    $(DEVICE_PATH)/manifest.xml
+
+DEVICE_MATRIX_FILE := \
+    hardware/qcom-caf/common/compatibility_matrix.xml
+
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
 # Kernel
 $(shell mkdir -p $(OUT_DIR)/target/product/stone/obj/KERNEL_OBJ/usr)

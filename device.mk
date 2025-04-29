@@ -267,6 +267,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
+# Init
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_stone)
+
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_ENABLE_UFFD_GC := false
