@@ -26,7 +26,6 @@ genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_expos
 genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm                                                         u:object_r:vendor_sysfs_graphics:s0
 
 # Extcon sysfs
-genfscon sysfs /devices/platform/soc/1628000.qcom,msm-eud/extcon                                                                    u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/soc/soc:rt-pd-manager/extcon                                                                       u:object_r:sysfs_extcon:s0
 
 # Fingerprint
