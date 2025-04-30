@@ -251,6 +251,9 @@ vendor/lib64/libmialgo_utils.so
 vendor/lib64/libmialgoengine.so
 vendor/lib64/libmiphone_capture_bokeh.so
 vendor/lib64/libmm-color-convertor.so
+vendor/lib64/libHalSuperSensorServer.so
+vendor/lib64/libSuperSensor.so
+vendor/lib64/libSuperSensorCPU.so
 vendor/lib64/libmorpho_Lowlight.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libofflinedump.so
@@ -262,6 +265,7 @@ vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libremosaiclib.so
+vendor/lib64/librmsclib1.so
 vendor/lib64/libsnpe_dsp_domains_v2.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libsynx.so
@@ -269,6 +273,7 @@ vendor/lib64/libtfestriping.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libvideofilter_only.so
 vendor/lib64/libvideooptfeature.so
+vendor/lib64/libpowercore.so
 vendor/lib64/libvidhance.so
 vendor/lib64/libvidhance_ldc.so
 vendor/lib64/libvidhance_stabilizer.so
@@ -440,8 +445,8 @@ vendor/etc/qdcm_calib_data_xiaomi_m17_38_0c_0a_fhd_dsc_video_dsi_panel.xml
 # Fingerprint
 vendor/etc/permissions/com.fingerprints.extension.xml
 vendor/framework/com.fingerprints.extension.jar
-vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.default.so
-vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.default.so
+vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.default.so;FIX_SONAME
+vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.default.so;FIX_SONAME
 vendor/lib64/com.fingerprints.extension@1.0.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
@@ -801,7 +806,6 @@ vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
 
 # ANT+
-vendor/lib/hw/com.dsi.ant@1.0-impl.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Bluetooth
@@ -882,7 +886,6 @@ vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
 vendor/etc/init/mutualex.rc
 vendor/lib64/libcne.so
-vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
@@ -929,7 +932,7 @@ vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.holi.so
 vendor/bin/diag-router
 vendor/etc/init/vendor.qti.diag.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
-vendor/lib64/vendor.qti.diaghal@1.0.so
+vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=_vendor
 system_ext/lib64/libdiag_system.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 
@@ -1031,7 +1034,7 @@ system_ext/lib64/fm_helium.so
 system_ext/lib64/libfm-hci.so
 system_ext/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -1123,7 +1126,28 @@ system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
+system_ext/lib64/vendor.qti.ims.callcapabilityaidlservice-V1-ndk.so
+system_ext/lib64/vendor.qti.ims.callcapability@1.0.so
+system_ext/lib64/vendor.qti.ims.configaidlservice-V1-ndk.so
+system_ext/lib64/vendor.qti.ims.configservice@1.0.so
+system_ext/lib64/vendor.qti.ims.configservice@1.1.so
+system_ext/lib64/vendor.qti.ims.connectionaidlservice-V1-ndk.so
+system_ext/lib64/vendor.qti.ims.connection@1.0.so
+system_ext/lib64/vendor.qti.ims.factoryaidlservice-V1-ndk.so
+system_ext/lib64/vendor.qti.ims.factory@2.0.so
+system_ext/lib64/vendor.qti.ims.factory@2.1.so
+system_ext/lib64/vendor.qti.ims.factory@2.2.so
+system_ext/lib64/vendor.qti.ims.rcssipaidlservice-V1-ndk.so
+system_ext/lib64/vendor.qti.ims.rcssip@1.0.so
+system_ext/lib64/vendor.qti.ims.rcssip@1.1.so
+system_ext/lib64/vendor.qti.ims.rcssip@1.2.so
+system_ext/lib64/vendor.qti.ims.rcsuceaidlservice-V1-ndk.so
+system_ext/lib64/vendor.qti.ims.rcsuce@1.0.so
+system_ext/lib64/vendor.qti.ims.rcsuce@1.1.so
+system_ext/lib64/vendor.qti.ims.rcsuce@1.2.so
+system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 system_ext/priv-app/ims/ims.apk
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/ims_rtp_daemon
@@ -1160,14 +1184,14 @@ vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so
 vendor/lib64/vendor.qti.ims.callinfo@1.0.so
-vendor/lib64/vendor.qti.ims.callcapability@1.0.so
+vendor/lib64/vendor.qti.ims.callcapability@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.ims.factory@1.0.so
 vendor/lib64/vendor.qti.ims.factory@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 
 # IRQ balance
@@ -1279,7 +1303,6 @@ vendor/lib/libdiag.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libmdmdetect.so
-vendor/lib/libminkdescriptor.so
 vendor/lib/libqcci_legacy.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
@@ -1408,6 +1431,7 @@ vendor/lib64/qcrild_libqcrilnrutils.so
 vendor/lib64/qcrilMarshal.so
 vendor/lib64/qtiril-utils.so
 vendor/lib64/qtiwakelock.so
+vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so
@@ -1431,12 +1455,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
 # Snapdragon Computer Vision Engine
-vendor/lib/libscveCommon.so
-vendor/lib/libscveCommon_stub.so
-vendor/lib/libscveObjectSegmentation.so
-vendor/lib/libscveObjectSegmentation_stub.so
-vendor/lib/libscveObjectTracker.so
-vendor/lib/libscveObjectTracker_stub.so
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
 vendor/lib64/libscveObjectSegmentation.so
