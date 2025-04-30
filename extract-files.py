@@ -62,6 +62,7 @@ module = ExtractUtilsModule(
     'stone',
     'xiaomi',
     blob_fixups=blob_fixups,
+    lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
     check_elf=False,
 )
