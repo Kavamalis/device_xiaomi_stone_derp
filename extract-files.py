@@ -51,17 +51,17 @@ lib_fixups: lib_fixups_user_type = {
 
 blob_fixups: blob_fixups_user_type = {
     'vendor/bin/STFlashTool': blob_fixup()
-         .add_needed('libbase_shim.so'),
+        .add_needed('libbase_shim.so'),
     'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
         .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
     'vendor/lib64/camera/components/com.qti.node.mialgocontrol.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
-     'vendor/lib64/libwvhidl.so': blob_fixup()
+    'vendor/lib64/libwvhidl.so': blob_fixup()
         .replace_needed(
             'libcrypto.so',
             'libcrypto-v33.so'
        ),
-       'vendor/etc/seccomp_policy/imsrtp.policy': blob_fixup()
+    'vendor/etc/seccomp_policy/imsrtp.policy': blob_fixup()
         .add_line_if_missing('gettid: 1'),
     ('vendor/lib64/libalLDC.so','vendor/lib64/libalhLDC.so'): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
