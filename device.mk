@@ -420,7 +420,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.pixel-libperfmgr \
+    android.hardware.power-service.lineage-libperfmgr \
     libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
@@ -524,6 +524,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/xiaomi \
     hardware/google/interfaces \
     hardware/google/pixel \
+     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client
 
 # Telephony
