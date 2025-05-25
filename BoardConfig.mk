@@ -99,9 +99,6 @@ DEVICE_MANIFEST_FILE := \
 DEVICE_MATRIX_FILE := \
     hardware/qcom-caf/common/compatibility_matrix.xml
 
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
-
 # Kernel
 $(shell mkdir -p $(OUT_DIR)/target/product/stone/obj/KERNEL_OBJ/usr)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
